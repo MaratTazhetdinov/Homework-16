@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="93.75"/>
         </scene>
-        <!--Students View Controller-->
+        <!--Students TableView-->
         <scene sceneID="DGR-1A-uA6">
             <objects>
                 <viewController id="h4p-88-6wG" customClass="StudentsViewController" customModule="Homework_16" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             <constraint firstItem="cso-kM-zCO" firstAttribute="trailing" secondItem="LVq-sl-4pG" secondAttribute="trailing" id="b8J-ao-fzd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kUw-M5-eFi"/>
+                    <navigationItem key="navigationItem" title="Students TableView" id="kUw-M5-eFi"/>
                     <connections>
                         <outlet property="studentsTableView" destination="LVq-sl-4pG" id="HzW-hM-SeN"/>
                     </connections>
