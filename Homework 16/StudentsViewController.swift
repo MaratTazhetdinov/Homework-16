@@ -53,6 +53,7 @@ class StudentsViewController: UIViewController {
         setStudentsInfo()
         listOfStudents = listOfStudents.sorted(by: {$0.name < $1.name})
         studentsTableView.dataSource = self
+        studentsTableView.delegate = self
         studentsTableView.register(UINib(nibName: "TableViewCell", bundle: nil),
                            forCellReuseIdentifier: "TableViewCell")
         setSortedStudents()
@@ -70,6 +71,12 @@ class StudentsViewController: UIViewController {
         sortedStudents.append(["title": "B students", "value": listOfStudents.filter({$0.avgMark > 4.00 && $0.avgMark<4.5})])
         sortedStudents.append(["title": "C students", "value": listOfStudents.filter({$0.avgMark > 3.00 && $0.avgMark<4.0})])
         sortedStudents.append(["title": "D students", "value": listOfStudents.filter({$0.avgMark < 3.00})])
+    }
+}
+
+extension StudentsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
